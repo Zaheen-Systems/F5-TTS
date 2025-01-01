@@ -55,8 +55,9 @@ DEFAULT_TTS_MODEL_CFG = [
 
 vocoder = load_vocoder()
 
-
-def load_f5tts(ckpt_path=str(cached_path("hf://SWivid/F5-TTS/F5TTS_Base/model_1200000.safetensors"))):
+def load_f5tts(ckpt_path="/media/zaheen/HD_11/F5-TTS/ckpts/F5TTS_Base_vocos_pinyin_urdu_dataset/model_last.pt"):
+# changed path to local trained checkpoints
+#def load_f5tts(ckpt_path=str(cached_path("hf://SWivid/F5-TTS/F5TTS_Base/model_1200000.safetensors"))):
     F5TTS_model_cfg = dict(dim=1024, depth=22, heads=16, ff_mult=2, text_dim=512, conv_layers=4)
     return load_model(DiT, F5TTS_model_cfg, ckpt_path)
 
