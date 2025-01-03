@@ -40,7 +40,7 @@ def main(cfg):
 
     # init trainer
     #checkpoint_path = str(files("f5_tts").joinpath(f"../../{cfg.ckpts.save_dir}")),
-    resume_from_checkpoint = cfg.ckpts.resume_from_checkpoint if hasattr(cfg.ckpts, 'resume_from_checkpoint') else None
+    #resume_from_checkpoint = cfg.ckpts.resume_from_checkpoint if hasattr(cfg.ckpts, 'resume_from_checkpoint') else None
 
     trainer = Trainer(
         model,
@@ -49,7 +49,7 @@ def main(cfg):
         num_warmup_updates=cfg.optim.num_warmup_updates,
         save_per_updates=cfg.ckpts.save_per_updates,
         checkpoint_path=str(files("f5_tts").joinpath(f"../../{cfg.ckpts.save_dir}")),
-        resume_from_checkpoint=resume_from_checkpoint,
+        #resume_from_checkpoint=resume_from_checkpoint,
         batch_size=cfg.datasets.batch_size_per_gpu,
         batch_size_type=cfg.datasets.batch_size_type,
         max_samples=cfg.datasets.max_samples,
