@@ -45,3 +45,4 @@ ckpts:
   save_per_updates: 50000  # save checkpoint per steps
   last_per_steps: 5000  # save last checkpoint per steps
   save_dir: ckpts/${model.name}_${model.mel_spec.mel_spec_type}_${model.tokenizer}_${datasets.name}
+  resume_from_checkpoint: "/media/zaheen/HD_11/F5-TTS/ckpts/F5TTS_Small_vocos_pinyin_urdu_dataset/model_last.pt"  # resume from checkpoint
